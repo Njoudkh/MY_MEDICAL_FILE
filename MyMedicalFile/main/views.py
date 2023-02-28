@@ -7,5 +7,5 @@ from django.http import HttpRequest, HttpResponse
 def index(request : HttpRequest):
     return render(request, "main/index.html")
 
-def about_us(request : HttpRequest):
-    return render(request, "main/about_us.html")
+def about(request : HttpRequest):
+    return render(request, "main/about.html")

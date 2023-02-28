@@ -8,7 +8,10 @@ class Patient_File(models.Model):
     national_identity = models.IntegerField()
     blood_type = models.CharField(max_length=5)
     patient_history = models.TextField()
-
+    def  __str__(self):
+        return self.name
+    class Meta:
+        ordering = ['name']
 
 
 class Doctor_File(models.Model):
@@ -16,4 +19,6 @@ class Doctor_File(models.Model):
     job_id = models.IntegerField()
     phone_number = models.IntegerField()
     address = models.TextField()
+    def  __str__(self):
+        return self.name
 

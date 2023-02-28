@@ -6,6 +6,10 @@ from django.contrib.auth import authenticate , login
 
 
 
+def login(request):
+    return render(request,'registration/login.html')
+
+
 def signup(request):
     if request.method == 'POST': #save
         form = SignupForm(request.POST)
