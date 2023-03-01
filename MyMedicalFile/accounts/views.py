@@ -5,6 +5,8 @@ from django.contrib.auth import authenticate , login
 # Create your views here.
 
 
+def logout(request):
+    return render(request,'registration/logged_out.html')
 
 def login(request):
     return render(request,'registration/login.html')

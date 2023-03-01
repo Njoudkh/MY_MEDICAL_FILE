@@ -37,10 +37,19 @@
     </table>
     <div class="px-4 py-5 px-md-6 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
 
-    <input type="submit" value="login" >
+    <input class="btn btn-outline-primary" type="submit" value="login" >
     <input type="hidden" name="next" value="{{ next }}">
   </form>
-  
+<hr>
+  <!--logout-->
+<form method="post" action="{% url 'accounts:logged_out'%}">
+    {% csrf_token %}
+
+    <input class="btn btn-outline-danger" type="submit" value="logout" >
+    <input type="hidden" name="next" value="{{ next }}">
+  </form>
+
+
 
   {# Assumes you setup the password_reset view in your URLconf #}
   <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
