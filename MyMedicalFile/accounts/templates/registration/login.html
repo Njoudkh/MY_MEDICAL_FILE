@@ -1,21 +1,16 @@
 {% extends "base_generic.html" %}
 
  
+{% block title %} Login Page {% endblock %}
 
 {% block content %}
+<div class="px-4 py-5 px-md-100 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
+    
+      
+<h2> Welcome Back ..</h2>
 
 
-<div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
-  <div class="container">
-    <div class="row gx-lg-5 align-items-center">
-      <div class="col-lg-6 mb-5 mb-lg-0">
-        <h1>Welcome back..</h1>
-        <div class="container px-1 py-5">
-
-
-
-
-  {% if form.errors %}
+{% if form.errors %}
     <p>Your username and password didn't match. Please try again.</p>
   {% endif %}
 
@@ -28,7 +23,7 @@
     {% endif %}
   {% endif %}
   
-  <form method="post" action="{% url 'login' %}">
+  <form method="post" action="{% url 'main:index_page'%}">
     {% csrf_token %}
     <table>
       <tr>
@@ -40,19 +35,19 @@
         <td>{{ form.password }}</td>
       </tr>
     </table>
-    <div class="px-4 py-3 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
+    <div class="px-4 py-5 px-md-6 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
 
     <input type="submit" value="login" >
     <input type="hidden" name="next" value="{{ next }}">
   </form>
   
 
-
   {# Assumes you setup the password_reset view in your URLconf #}
   <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
 </div>
+<div class="px-4 py-5 px-md-100 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
+</div>
+<div class="px-4 py-3 px-md-100 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
 
-
-
-
+</div>
 {% endblock %}

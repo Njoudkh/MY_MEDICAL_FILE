@@ -1,0 +1,42 @@
+{% extends "base_generic.html" %}
+{% block title %} Files Page {% endblock %}
+{% block content %}
+<div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
+   
+    <h2 class="card text-center mb-3">Patients Files</h2>
+    <div class="boxContainer">
+        <table class="elementsContainer">
+            <tr>
+                <td>
+                    <input type="text" placeholder="Search"
+                    class="search">
+                </td>
+                <td>
+                    <a href="#"><i class="material-icons">search</i>
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+{% for f in fi %}
+
+<h3>patient name is :{{f.name}}</h3>
+<h6> patient national_identity : {{f.national_identity}}</h6>
+<h6>patient blood type : {{f.blood_type}}</h6>
+<h6>patient history : {{f.patient_history}}</h6>
+<hr>
+
+
+{% endfor %}
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+

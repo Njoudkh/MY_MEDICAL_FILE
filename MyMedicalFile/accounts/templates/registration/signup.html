@@ -1,5 +1,5 @@
 {% extends "base_generic.html" %}
-
+{% block title %} Register Page {% endblock %}
 {% block content %}
 <div class="px-4 py-5 px-md-100 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
     
@@ -7,7 +7,7 @@
 <h2> Welcome register your information please ..</h2>
 
 
-<form method='POST'>
+<form action="{% url 'accounts:login_page'%}" method='POST'>
     {% csrf_token %}
     
     {{form}}

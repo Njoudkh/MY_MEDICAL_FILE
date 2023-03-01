@@ -40,8 +40,8 @@
                             <h1 class="display-5 fw-bolder text-white mb-2">MY MEDICAL FILE</h1>
                             <p class="lead text-white-50 mb-4">A health platform that consolidates patients' files and patient histories in more than one health agency, whether governmental or private!</p>
                             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-                                <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features">New File</a>
-                                <a class="btn btn-outline-light btn-lg px-4" href="">patients Files</a>
+                                <a class="btn btn-primary btn-lg px-4 me-sm-3" href="{% url 'admin:index' %}">New File</a>
+                                <a class="btn btn-outline-light btn-lg px-4" href="{% url 'files:files_page'%}">patients Files</a>
                             </div>
                         </div>
                     </div>
